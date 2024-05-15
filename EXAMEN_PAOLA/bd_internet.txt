@@ -1,0 +1,17 @@
+CREATE DATABASE bd_internet;
+
+USE bd_internet;
+
+CREATE TABLE estudiantes (
+id INT AUTO INCREMENT PRIMARY KEY,
+nombre VARCHAR(50),
+apellido VARCHAR(50),
+seminario VARCHAR(50),
+confirmado TINYINT(1) CHECK (confirmado IN (0,1)),
+fecha DATE
+);
+
+INSERT INTO estudiantes (nombre,apellido,seminario,confirmado,fecha)
+VALUES('Paola','Perez','Taller de Base de Datos',1,'2024-05-10');
+
+SELECT * FROM estudiantes
